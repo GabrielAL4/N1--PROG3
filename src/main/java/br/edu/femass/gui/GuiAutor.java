@@ -1,5 +1,7 @@
 package br.edu.femass.gui;
 
+import br.edu.femass.dao.DaoAluno;
+import br.edu.femass.dao.DaoAutor;
 import br.edu.femass.models.Autor;
 
 import javax.swing.*;
@@ -12,7 +14,7 @@ public class GuiAutor {
     private JTextField CampoSobrenome;
     private JTextField CampoNacionalidade;
     private JButton adcionarButton;
-    private JPanel JPAutor;
+    public JPanel JPAutor;
 
 
     public GuiAutor() {
@@ -21,11 +23,11 @@ public class GuiAutor {
             public void actionPerformed(ActionEvent e) {
                 try {
                     Autor autor = new Autor(CampoNome.getText(), CampoSobrenome.getText(), CampoNacionalidade.getText());
+                    new DaoAutor().save(autor);
                     System.out.println(autor);
                 } catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
-
             }
         });
     }
@@ -37,6 +39,5 @@ public class GuiAutor {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
     }
 }
