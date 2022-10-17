@@ -1,7 +1,8 @@
 [ {
-  "nome" : "Gabriel",
-  "endereco" : "Rua 1",
-  "telefone" : "12312312",
+  "nome" : "Antonio",
+  "endereco" : "Avenida 1",
+  "telefone" : "23113",
   "prazoMaximoDeDevolucao" : 30,
+  "disciplina" : "Espanhol",
   "codigo" : 0
 } ]

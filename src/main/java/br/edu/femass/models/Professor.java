@@ -2,17 +2,28 @@ package br.edu.femass.models;
 
 public class Professor extends Leitor{
     protected String disciplina;
-
+    protected  int prazo;
     public Professor(String nome, String endereco, String telefone, String disciplina) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
         this.disciplina = disciplina;
-        setPrazoMaximoDeDevolucao(30);
+        this.prazo = setPrazoMaximoDeDevolucao(30);
+    }
+
+    public Professor() {
+    }
+
+    public String getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(String disciplina) {
+        this.disciplina = disciplina;
     }
 
     @Override
-    public void setPrazoMaximoDeDevolucao(Integer prazoMaximoDeDevolucao) {
-        super.setPrazoMaximoDeDevolucao(prazoMaximoDeDevolucao);
+    public int setPrazoMaximoDeDevolucao(Integer prazoMaximoDeDevolucao) {
+        return super.setPrazoMaximoDeDevolucao(prazoMaximoDeDevolucao);
     }
 }

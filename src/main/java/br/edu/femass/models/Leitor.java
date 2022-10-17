@@ -53,7 +53,12 @@ public class Leitor {
         return prazoMaximoDeDevolucao;
     }
 
-    public void setPrazoMaximoDeDevolucao(Integer prazoMaximoDeDevolucao) {
-        this.prazoMaximoDeDevolucao = prazoMaximoDeDevolucao;
+    public int setPrazoMaximoDeDevolucao(Integer prazoMaximoDeDevolucao) {
+        return this.prazoMaximoDeDevolucao = prazoMaximoDeDevolucao;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

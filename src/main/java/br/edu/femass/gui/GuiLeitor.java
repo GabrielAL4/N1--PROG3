@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class GuiLeitor {
     private JButton addAlunoButtonButton;
     private JButton addProfessorButtonButton;
-    private JPanel JPLeitor;
+    protected JPanel JPLeitor;
 
     public GuiLeitor(){
         addAlunoButtonButton.addActionListener(new ActionListener() {

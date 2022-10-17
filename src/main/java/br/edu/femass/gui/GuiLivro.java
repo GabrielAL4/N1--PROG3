@@ -1,5 +1,6 @@
 package br.edu.femass.gui;
 
+import br.edu.femass.dao.DaoAutor;
 import br.edu.femass.dao.DaoLivro;
 import br.edu.femass.models.Autor;
 import br.edu.femass.models.Livro;
@@ -7,14 +8,15 @@ import br.edu.femass.models.Livro;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class GuiLivro {
     private JTextField campoNomeLivro;
-    private JTextField campoCodigoLivro;
     private JButton addLivroButtonButton;
     public JPanel JPLivro;
-    private JComboBox<Autor> autorComboBox;
     private JButton cadastrarButton;
+    private JList listAutor;
+    private JButton atualizarButton;
 
     public GuiLivro() {
 
@@ -29,22 +31,38 @@ public class GuiLivro {
                 frame.setVisible(true);
             }
         });
-
+        updateList();
         addLivroButtonButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Autor autor = (Autor) autorComboBox.getSelectedItem();
-                    Livro livro = new Livro(campoNomeLivro.getText(), campoCodigoLivro.getText(), autorComboBox);
+                    Livro livro = new Livro(campoNomeLivro.getText(), listAutor.getSelectedValuesList());
                     new DaoLivro().save(livro);
+                    updateList();
                     System.out.println(livro);
                 } catch (Exception ex){
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
             }
         });
-    }
 
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateList();
+            }
+        });
+    }
+    private void updateList() {
+
+
+        try {
+            List<Autor> autores = new DaoAutor().getAll();
+            listAutor.setListData(autores.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     public static void main(String[] args) {
         GuiLivro guiLivro = new GuiLivro();
         JFrame Lframe = new JFrame("Cadastro De Livro");

@@ -1,0 +1,25 @@
+[ {
+  "codigo" : null,
+  "titulo" : "livro",
+  "autor" : [ {
+    "nome" : "Gabriel",
+    "sobrenome" : "Albuquerque",
+    "nacionalidade" : "Brasileiro"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "Harry Potter",
+  "autor" : [ {
+    "nome" : "JK",
+    "sobrenome" : "Rowling",
+    "nacionalidade" : "Britânico"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "As cronicas de beibe",
+  "autor" : [ {
+    "nome" : "Rafael ",
+    "sobrenome" : "Oliveira",
+    "nacionalidade" : "Brasileiro"
+  } ]
+} ]
