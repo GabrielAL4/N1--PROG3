@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="N1--PROG3" />
         <module name="N1_GabrielAlbuquerque" />
       </profile>
     </annotationProcessing>

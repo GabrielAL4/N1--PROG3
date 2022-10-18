@@ -29,7 +29,7 @@ public class ProfessorTest {
     }
 
     @Test
-    void setDisciplina() {
+     void setDisciplina() {
         Professor professor = new Professor(
                 "Allan",
                 "Rua 1",
