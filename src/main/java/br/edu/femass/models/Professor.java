@@ -23,6 +23,11 @@ public class Professor extends Leitor{
     }
 
     @Override
+    public String toString() {
+        return nome + " " + disciplina;
+    }
+
+    @Override
     public int setPrazoMaximoDeDevolucao(Integer prazoMaximoDeDevolucao) {
         return super.setPrazoMaximoDeDevolucao(prazoMaximoDeDevolucao);
     }

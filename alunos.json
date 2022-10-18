@@ -1,0 +1,8 @@
+[ {
+  "nome" : "Gabriel",
+  "endereco" : "Rua 2",
+  "telefone" : "2223422323",
+  "prazoMaximoDeDevolucao" : 15,
+  "matricula" : "22019283721",
+  "codigo" : 0
+} ]

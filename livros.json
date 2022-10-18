@@ -1,12 +1,4 @@
 [ {
-  "codigo" : null,
-  "titulo" : "livro",
-  "autor" : [ {
-    "nome" : "Gabriel",
-    "sobrenome" : "Albuquerque",
-    "nacionalidade" : "Brasileiro"
-  } ]
-}, {
   "codigo" : 1,
   "titulo" : "Harry Potter",
   "autor" : [ {
@@ -20,6 +12,14 @@
   "autor" : [ {
     "nome" : "Rafael ",
     "sobrenome" : "Oliveira",
+    "nacionalidade" : "Brasileiro"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "Via Láctea",
+  "autor" : [ {
+    "nome" : "Olavo",
+    "sobrenome" : "Bilac",
     "nacionalidade" : "Brasileiro"
   } ]
 } ]

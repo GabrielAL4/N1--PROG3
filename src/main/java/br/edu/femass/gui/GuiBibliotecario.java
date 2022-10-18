@@ -10,9 +10,7 @@ public class GuiBibliotecario {
     private JButton cadastrarAutorButton;
     private JButton cadastrarLivroButton;
     private JButton cadastrarLeitorButton;
-    private JButton button4;
     private JButton exemplaresButton;
-    private JButton button6;
     protected JPanel JPBibliotecario;
 
     public GuiBibliotecario(){
@@ -48,21 +46,6 @@ public class GuiBibliotecario {
             }
         });
 
-        cadastrarLeitorButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    GuiLeitor guiLeitor = new GuiLeitor();
-                    JFrame frame = new JFrame("Cadastro De Autor");
-                    frame.setContentPane(guiLeitor.JPLeitor);
-                    frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-                    frame.pack();
-                    frame.setVisible(true);
-                }catch (Exception ex){
-                    JOptionPane.showMessageDialog(null, ex.getMessage());
-                }
-            }
-        });
 
         exemplaresButton.addActionListener(new ActionListener() {
             @Override

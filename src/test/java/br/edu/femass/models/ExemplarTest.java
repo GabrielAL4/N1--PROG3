@@ -1,19 +1,22 @@
 package br.edu.femass.models;
 
+import jdk.dynalink.linker.LinkerServices;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExemplarTest {
 
     @Test
-    void getNome() {
-        Autor autor = new Autor(
-                "GabrieL",
-                "Albuquerque",
-                "Brasileiro"
+    void getCodigo() {
+        List<Livro> livros = new ArrayList<>();
+        Exemplar exemplar = new Exemplar(
+            livros
         );
-        String esperado = "Gabriel";
-        Assertions.assertEquals(esperado, autor.getNome());
+        Long esperado = exemplar.getCodigo();
+        Assertions.assertEquals(esperado, exemplar.getCodigo());
     }
 
     @Test

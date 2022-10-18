@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuiMenu {
-    private JPanel JPMenu;
+    public JPanel JPMenu;
     private JButton bibliotecarioButton;
     private JButton atendenteButton;
 
@@ -29,6 +29,16 @@ public class GuiMenu {
         atendenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    GuiAtendente guiAtendente = new GuiAtendente();
+                    JFrame frame = new JFrame("Menu Atendente");
+                    frame.setContentPane(guiAtendente.JPAtendente);
+                    frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                    frame.pack();
+                    frame.setVisible(true);
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
+                }
             }
         });
     }

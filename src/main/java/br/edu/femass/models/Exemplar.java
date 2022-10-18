@@ -17,6 +17,9 @@ public class Exemplar {
         this.incremento++;
     }
 
+    public Exemplar() {
+    }
+
     public List<Livro> getLivros() {
         return livros;
     }
